@@ -1,5 +1,7 @@
-const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
+// const express = require('express');
+import express from 'express';
+// const { createProxyMiddleware } = require('http-proxy-middleware');
+import { createProxyMiddleware } from 'http-proxy-middleware';
 const app = express();
 import cors from 'cors';
 // import configCors from './config/cors';

@@ -1,5 +1,5 @@
 // thư viện dùng để định dạng process.env.PORT 
-import 'dotenv/config'
+// import 'dotenv/config'
 
 const configCors = (app) => {
     // Add headers before the routers are defined
