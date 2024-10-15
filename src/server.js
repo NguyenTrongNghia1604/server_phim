@@ -5,10 +5,11 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 import bodyParser from 'body-parser';
 const app = express();
 import cors from 'cors';
-// import configCors from './config/cors';
+import configCors from './cors.js';
+//process.env.CORS_ORIGIN || "https://phimhay-five.vercel.app"
 app.use(
     cors({
-        origin: process.env.CORS_ORIGIN || "https://phimhay-five.vercel.app",
+        origin: '*',
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         preflightContinue: false,
         optionsSuccessStatus: 204,
@@ -29,7 +30,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// configCors(app);
+configCors(app);
 app.listen(process.env.PORT || 5000, () => {
     console.log('Proxy server is running');
 });
