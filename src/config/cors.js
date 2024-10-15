@@ -4,7 +4,7 @@
 const configCors = (app) => {
     // Add headers before the routers are defined
     app.use(function(req, res, next){
-        res.setHeader('Access-Control-Allow-Origin', process.env.REACT_URL)
+        res.setHeader('Access-Control-Allow-Origin', process.env.REACT_URL || "https://phimhay-five.vercel.app");
 
         // Request methods you wish to allow
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
