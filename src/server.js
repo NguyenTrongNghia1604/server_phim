@@ -2,6 +2,7 @@
 import express from 'express';
 // const { createProxyMiddleware } = require('http-proxy-middleware');
 import { createProxyMiddleware } from 'http-proxy-middleware';
+import bodyParser from 'body-parser';
 const app = express();
 import cors from 'cors';
 // import configCors from './config/cors';
